@@ -1,11 +1,16 @@
 // Variables
+@import 'base/variables.scss';
 
 // Base
 @import 'base/base.scss';
 
+
 // Modules
 @import 'modules/grid';
 @import 'modules/banner';
+
+// Components
+@import 'components/header.scss';
 
 // Pages
 @import 'pages/home';

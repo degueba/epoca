@@ -5,87 +5,59 @@ block vars
 	-	var bodyClass = 'home'
 
 block content
-	header.header
-		.container
-			button(type="button" id="btn-menu" class="js-open-menu btn-menu")
-				i.fa.fa-bars
-			nav.menu.menu-mobile
-				button(type="button" id="btn-close-menu" class="js-close-menu")
-					i.fa.fa-times
-				ul
-					li
-						a Home
-					li
-						a Sobre
-					li.has-submenu
-						a Serviços
-						ul.submenu
-							li
-								a Sub1
-							li
-								a Sub2
-							li 
-								a Sub3
-					li
-						a Trabalhe Conosco
-					li 
-						a Contato
-
-			nav.menu.menu-desktop
-				ul
-					li 
-						a Home
-					li 
-						a Sobre
-					li.has-submenu 
-						a Serviços
-						ul.submenu
-							li 
-								a Sub1
-							li 
-								a Sub2
-							li 
-								a Sub3
-			.logo
-				img(src="http://via.placeholder.com/100x100")/
-			nav.menu.menu-aside.menu-desktop
-				ul
-					li 
-						a(href="trabalhe-conosco.html") Trabalhe Conosco
-					li 
-						a(href="#") Contato
-	.banner
-		.banner__tv.js-slide
-			div
-				img(src="http://via.placeholder.com/1280x500")/
-			div
-				img(src="http://via.placeholder.com/1280x500")/
-			div
-				img(src="http://via.placeholder.com/1280x500")/
-
-	//- Parallax
-	.rellax
-		section.thumbs
-			.container.grid.grid--center.grid--column
-				figure.thumbs__figure
-					img(src="http://via.placeholder.com/200x200")/
-					span hover #000
-				figure.thumbs__figure
-					img(src="http://via.placeholder.com/200x200")/
-					span hover #000
-				figure.thumbs__figure 
-					img(src="http://via.placeholder.com/200x200")/
-					span hover #000
-				figure.thumbs__figure
-					img(src="http://via.placeholder.com/200x200")/
-					span hover #000
-		section.notice
-			.container.grid.grid--evenly.grid--column
-				figure.notice__figure
-					img(src="http://via.placeholder.com/400x400")/
-				p.notice__text
-					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar est eu turpis volutpat, in lobortis eros volutpat. Nunc maximus mi sed orci rutrum cursus. Phasellus pretium vitae metus eu convallis. Sed at mauris elementum, vehicula ex vitae, maximus est. Sed nec consectetur mi. Pellentesque fermentum leo turpis, at ornare massa tempor nec.
-
+	include ./subtemplates/header
+	.container
+		.home__banner-tv
+			h1 clarins
+			img(src="http://via.placeholder.com/1280x300")/
+		.home__bestseller
+			h1.home__bestseller-title Mais vendidos
+			div.js-carousel
+				- var n = 0;
+				while n < 6
+					div.home__bestseller-item(id=n++)
+						img(src="http://via.placeholder.com/300x300").home__bestseller-image
+						a.home__bestseller-btnsee ver produtos
+		.home__department
+			nav.home__department-menuAside
+				div.home__menuAside-category
+					h1.home__menuAside-title Tipos de Cabelo
+					ul.home__menuAside-links
+						li
+							a Cacheados
+				div.home__menuAside-category
+					h1.home__menuAside-title Benefícios
+					ul.home__menuAside-links
+						li
+							a Cacheados
+				div.home__menuAside-category
+					h1.home__menuAside-title Finalizadores
+					ul.home__menuAside-links
+						li
+							a Cacheados
+				div.home__menuAside-category
+					h1.home__menuAside-title Kits Completos
+					ul.home__menuAside-links
+						li
+							a Cacheados
+				div.home__menuAside-category
+					h1.home__menuAside-title Linha Homme
+					ul.home__menuAside-links
+						li
+							a Cacheados
+				div.home__menuAside-category
+					h1.home__menuAside-title Pro Fiber
+					ul.home__menuAside-links
+						li
+							a Cacheados
+			div.home__department-shelve
+				include ./shelves/Shelf.pug
+				include ./components/category-banners.pug
+		div.home__info
+			h4 Época cosméticos | uma empresa do grupo Magazineluiza
+			p A época acredita no poder transformador de explorar a própria beleza. Porque ser capaz de explorar sua beleza é exprimentar mil formas de se sentir bela e dessa forma se descobrir dela. Quer saber mais sobre a gente? Somos o e-commerce mais completo.. #[a continue lendo]
+		
+		include ./subtemplates/footer.pug
 
 
 
