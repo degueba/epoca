@@ -1,0 +1,26 @@
+doctype html
+html
+	block vars
+		-	var pageTitle = 'Worthix '
+		-	var bodyClass = ''
+	head
+		title= pageTitle
+		meta(charset="UTF-8")/
+		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")/
+		meta(name="format-detection", content="telephone=no")/
+		link(rel="stylesheet" href="css/main.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.woff")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.ttf")
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css")
+	body(class= bodyClass)
+		main
+			block content
+
+
+		block scripts
+			
+		script(src="http://code.jquery.com/jquery-2.2.4.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")
+		script(src="js/parallax.min.js")
+		script(src="js/main.js")

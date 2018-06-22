@@ -1,0 +1,28 @@
+.slick-slider {
+	.slick-arrow {
+		position: absolute;
+		top: 50%;
+		z-index: 2;
+		font-size: 2em;
+		cursor: pointer;
+
+
+		// mobile
+		@media only screen and (max-width: 767px) {
+			top: 40%;
+		}
+
+
+		&.slick-prev {
+			left: 15px;
+		}
+
+		&.slick-next {
+			right: 15px;
+		}
+	}
+
+	img {
+		cursor: -webkit-grab;
+	}
+}
