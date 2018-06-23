@@ -1,0 +1,64 @@
+.footer {
+	&__top {
+		padding: $s-md 0;
+		background-color: $c-black;
+
+		&-links {
+			display: flex;
+			align-items: center;
+
+			ul {
+				li {
+					a {
+						text-decoration: none;
+						text-transform: capitalize;
+						line-height: 30px;
+						span {
+							color: $c-white;
+						}
+					}
+				}
+			}
+		}
+
+		&-paymentAndSocial {
+			flex: 0 1 25%;
+
+
+			h2 {
+				font-size: $f-size-md;
+				color: $c-white;
+				margin-bottom: $s-md;
+			}
+
+			.payment, .social {
+				justify-content:space-between;
+				margin: $s-lg 0;
+				flex-wrap: wrap;
+
+				&__items {
+					display: flex;
+					justify-content: flex-start;
+
+					img {
+						margin: 0 $s-md 0 0;
+					}
+				}
+			}
+		}
+	}
+
+	&__bottom {
+		text-align: center;
+	}
+
+	&__security {
+		display: flex;
+		justify-content: center;
+
+
+		figure {
+			margin: $s-md $s-md;
+		}
+	}
+}

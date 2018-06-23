@@ -48,6 +48,14 @@
 		}
 	}
 
+	&__info {
+		margin: $s-md 0;
+
+		p {
+			color: $c-gray-darker;
+		}
+	}
+
 	&__menuAside {
 		&-category {
 			margin: $s-md 0;

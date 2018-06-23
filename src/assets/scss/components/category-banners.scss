@@ -1,0 +1,12 @@
+.category-banners {
+	&__categories {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		text-align: center;
+	}
+	&__item {
+		flex: 0 1 360px;
+		margin: $s-md $s-xh $s-md 0;
+	}
+}

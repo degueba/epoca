@@ -1,6 +1,7 @@
 .grid {
 	display: flex;
 	align-content: center;
+	align-items: center;
 
 	&--center  {
 		justify-content: center;
@@ -8,6 +9,10 @@
 
 	&--evenly {
 		justify-content: space-evenly;
+	}
+
+	&--between {
+		justify-content: space-between;
 	}
 
 	&--column {

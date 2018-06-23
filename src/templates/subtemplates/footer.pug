@@ -1,12 +1,40 @@
 footer.footer
 	.footer__top
-		div.footer__top-links
-		div.footer__top-paymentAndSocial
+		.container.grid.grid--between
+			div.footer__top-links
+				- var n = ['Central de Atendimento', 'Acompanhe seu Pedido', '2° via de Boleto', 'Troca e Devolução', 'Privacidade e Segurança', 'Direito de Arrependimento', 'Cupons de Desconto'];
+				- var o =  ['Vendas Autorizadas L\'Oreal', 'Como Comprar', 'Formas de Pagamento', 'Prazo de Entrega', 'Época Cosméticos é Confiável', 'Contrato de Venda', 'Procon-RJ'];
+				ul
+					each val in n
+						li
+							a(href="#")
+								span= val
+				ul
+					each val2 in o
+						li
+							a(href="#")
+								span= val2
+			div.footer__top-paymentAndSocial
+				.payment
+					h2 Forma de Pagamento
+					.payment__items
+						img(src="http://via.placeholder.com/50x50")
+						img(src="http://via.placeholder.com/50x50")
+						img(src="http://via.placeholder.com/50x50")
+						img(src="http://via.placeholder.com/50x50")
+				.social
+					h2 Vem ficar pertinho
+					.social__items
+						img(src="http://via.placeholder.com/50x50")
+						img(src="http://via.placeholder.com/50x50")
+						img(src="http://via.placeholder.com/50x50")
+						img(src="http://via.placeholder.com/50x50")
 	.footer__bottom
+		- var n = 0;
 		.footer__security
-			img(src="http://via.placeholder.com/50x50")
-			img(src="http://via.placeholder.com/50x50")
-			img(src="http://via.placeholder.com/50x50")
-			img(src="http://via.placeholder.com/50x50")
+			while n < 7
+				figure(data-image=n++)
+					img(src="http://via.placeholder.com/50x50")
+			
 		.footer__copyright
 			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tortor leo, tempus dictum enim quis, faucibus tincidunt nisl. In condimentum ante purus, eget laoreet est porttitor scelerisque. 
